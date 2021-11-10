@@ -1,0 +1,10 @@
+body {
+    background: #000000;
+}
+
+#canvas{
+    border: 0px solid rgb(251, 255, 0); 
+    image-rendering: pixelated; 
+    position: absolute; top: 0px; 
+    left: 0px;
+}
