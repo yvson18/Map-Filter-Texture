@@ -36,6 +36,54 @@ Por outro lado, A figura 2 ilustra o mesmo cubo com a filtragem sendo a Bilinear
 <h2>Fenômeno de Minificação</h2>
 
 
+<h3>Filtro de Anisotropia</h3>
+
+Ainda no contexto da minificação, a análise a seguir foi feita levando em consideração os parâmetros padrões de magnificação e minificação do ThreeJs(LinearFilter e LinearMipmapLinearFilter, respectivamente).
+Neste âmbito, a metodologia consistiu em  varirar o parâmetro **texture.anisotropy** de modo a atribuí-lo com os valores: 2,4,8 e 16(valores estes citados em sala de aula).  
+
+Em primeiro plano, com a anisotropia igual a 2, pôde-se percerber um borramento na fronteira superior da figura.
+
+<br>
+<p align = "center">
+<img  style = "justify-content: center" src= "prints/aniso2.png" alt =   "drawing" width = "306" height = "298">
+</p>
+
+<p align = "center">
+<b> Figura 3: texture.anisotropy: 2</b><p>
+</p>
+
+
+Aumentando a anisotropia para 4 houve um melhoramento da qualidade da imagem, porém ainda com leves borramentos.
+<br>
+<p align = "center">
+<img  style = "justify-content: center" src= "prints/aniso4.png" alt =   "drawing" width = "306" height = "298">
+</p>
+
+<p align = "center">
+<b> Figura 4: texture.anisotropy: 4</b><p>
+</p>
+
+A partir da anisotropia em 8, a qualidade da imagem teve um nítido melhoramento, de modo que não houve muita diferença entre a anisotropia ser 8 ou 16.
+
+<br>
+<p align = "center">
+<img  style = "justify-content: center" src= "prints/aniso8.png" alt =   "drawing" width = "306" height = "298">
+</p>
+
+<p align = "center">
+<b> Figura 5: texture.anisotropy: 8</b><p>
+</p>
+
+<br>
+<p align = "center">
+<img  style = "justify-content: center" src= "prints/aniso16.png" alt =   "drawing" width = "306" height = "298">
+</p>
+
+<p align = "center">
+<b> Figura 6: texture.anisotropy: 16</b><p>
+</p>
+
+
 ## Referências
 
 https://sbcode.net/threejs/mipmaps

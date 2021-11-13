@@ -3,7 +3,7 @@ import {OrbitControls} from './threejs-orbits-depend/OrbitControls.js'
 import {src_gate, src_checkerboard,teste} from "./img_textures.js"
 
 let image = new Image();
-image.src = "akuaku.png"// textura do portão do Doom
+image.src = "./samples/brasao_flamengo_grid.png"// textura do portão do Doom
 //image.src = src_checkerboard; // texture do padrão xadrez
 
 const texture = new THREE.Texture(image);
@@ -11,8 +11,8 @@ const texture = new THREE.Texture(image);
 image.onload = function() {
     texture.needsUpdate = true;
     texture.magFilter = THREE.LinearFilter; // filtro a ser utilizado em caso de magnificação.
-    texture.minFilter = THREE.NearestFilter; // filtro a ser utilizado em caso de minificação.
-    texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
+    texture.minFilter = THREE.LinearMipmapLinearFilter; // filtro a ser utilizado em caso de minificação.
+    texture.anisotropy = 16; // fator máximo de anisotropia para o filtro anisotrópico.
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
 };
@@ -70,14 +70,3 @@ function render() {
 }
 
 render();
-
-/*
-  (0.125,0.875) --> (1,4)
-  (0.125,0.625) --> (1,3)
-  (0.125,0.125) --> (1,1)
-  (0.375,0.125) --> (2,1)
-  (0.375,0.0)   --> (2,0) 
-  (0.625,0.0)   --> (3,0)
-
-
-*/
