@@ -39,7 +39,7 @@ Na análise da Minificação, foi utilizada uma imagem de dimensões 2048x2048 *
 
 <h3>Filtro de MipMapping</h3>
 
-O filtro de mipmapping foi variado de acordo com as opções do **three.js**, nesta aálise o parâmetro **texture.anisotropy** foi mantido como 1.
+O filtro de mipmapping foi variado de acordo com as opções do **three.js**, nesta análise o parâmetro **texture.anisotropy** foi mantido como 1.
 
 As figuras 3, 4, 5 e 6 mostram o uso dos filtros **NearestMipmapNearestFilter**, **NearestMipmapLinearFilter**, **LinearMipmapNearestFilter**, **LinearMipmapLinearFilter**.
 
@@ -89,7 +89,8 @@ Já o **LinearMipmapLinearFilter**, escolhe dois mipmaps que mais se aproximam d
 
 <h3>Filtro de Anisotropia</h3>
 
-Neste âmbito, a metodologia consistiu em  varirar o parâmetro **texture.anisotropy** de modo a atribuí-lo com os valores: 2,4,8 e 16(valores estes citados em sala de aula).  
+Ainda no contexto da minificação, a análise a seguir foi feita levando em consideração os parâmetros padrões de magnificação e minificação do ThreeJs(LinearFilter e LinearMipmapLinearFilter, respectivamente).
+Nesse âmbito, a metodologia consistiu em  varirar o parâmetro **texture.anisotropy** de modo a atribuí-lo com os valores: 2,4,8 e 16(valores estes citados em sala de aula).  
 
 Em primeiro plano, com a anisotropia igual a 2, pôde-se percerber um borramento na fronteira superior da figura.
 
