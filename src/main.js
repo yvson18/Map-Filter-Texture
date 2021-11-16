@@ -1,18 +1,83 @@
 import * as THREE from './threejs-orbits-depend/three.module.js'
 import {OrbitControls} from './threejs-orbits-depend/OrbitControls.js'
-import {src_gate, src_checkerboard,teste} from "./img_textures.js"
 
 let image = new Image();
-image.src = "./samples/brasao_flamengo_grid.png"// textura do portão do Doom
-//image.src = src_checkerboard; // texture do padrão xadrez
+image.src = "./samples/aku_aku_pixelado.png"
+//image.src = "./samples/brasao_do_flamengo.png"
 
 const texture = new THREE.Texture(image);
 
 image.onload = function() {
     texture.needsUpdate = true;
-    texture.magFilter = THREE.LinearFilter; // filtro a ser utilizado em caso de magnificação.
-    texture.minFilter = THREE.LinearMipmapNearestFilter; // filtro a ser utilizado em caso de minificação.
+    
+    // Default do Three.js
+    texture.magFilter = THREE.LinearFilter; // filtro default para magnificação
+    texture.minFilter = THREE.LinearMipmapLinearFilter; // filtro default para minificação
     texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
+    
+    // // Default do template
+    
+    // texture.magFilter = THREE.NearestFilter; // filtro a ser utilizado em caso de magnificação.
+    // texture.minFilter = THREE.NearestFilter; // filtro a ser utilizado em caso de minificação.
+    // texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
+    
+    // // Magnificação Nearest
+
+    // texture.magFilter = THREE.NearestFilter; // filtro a ser utilizado em caso de magnificação.
+    // texture.minFilter = THREE.NearestFilter; // filtro a ser utilizado em caso de minificação.
+    // texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
+
+    // // Magnificação Linear
+
+    // texture.magFilter = THREE.LinearFilter; // filtro a ser utilizado em caso de magnificação.
+    // texture.minFilter = THREE.NearestFilter; // filtro a ser utilizado em caso de minificação.
+    // texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
+
+    // // Minificação NearestMipmapNearestFilter
+
+    // texture.magFilter = THREE.LinearFilter; // filtro a ser utilizado em caso de magnificação.
+    // texture.minFilter = THREE.NearestMipmapNearestFilter; // filtro a ser utilizado em caso de minificação.
+    // texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
+
+    // // Minificação NearestMipmapLinearFilter
+
+    // texture.magFilter = THREE.LinearFilter; // filtro a ser utilizado em caso de magnificação.
+    // texture.minFilter = THREE.NearestMipmapLinearFilter; // filtro a ser utilizado em caso de minificação.
+    // texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
+
+    // // Minificação LinearMipmapNearestFilter
+
+    // texture.magFilter = THREE.LinearFilter; // filtro a ser utilizado em caso de magnificação.
+    // texture.minFilter = THREE.LinearMipmapNearestFilter; // filtro a ser utilizado em caso de minificação.
+    // texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
+
+    // // Minificação LinearMipmapLinearFilter
+
+    // texture.magFilter = THREE.LinearFilter; // filtro a ser utilizado em caso de magnificação.
+    // texture.minFilter = THREE.LinearMipmapLinearFilter; // filtro a ser utilizado em caso de minificação.
+    // texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
+
+    // // Filtragem Anisotropica 2
+    // texture.magFilter = THREE.LinearFilter; // filtro default para magnificação
+    // texture.minFilter = THREE.LinearMipmapLinearFilter; // filtro default para minificação
+    // texture.anisotropy = 2; // fator máximo de anisotropia para o filtro anisotrópico.
+
+    // // Filtragem Anisotropica 4 
+    // texture.magFilter = THREE.LinearFilter; // filtro default para magnificação
+    // texture.minFilter = THREE.LinearMipmapLinearFilter; // filtro default para minificação
+    // texture.anisotropy = 4; // fator máximo de anisotropia para o filtro anisotrópico.
+
+    // // Filtragem Anisotropica 8
+    // texture.magFilter = THREE.LinearFilter; // filtro default para magnificação
+    // texture.minFilter = THREE.LinearMipmapLinearFilter; // filtro default para minificação
+    // texture.anisotropy = 8; // fator máximo de anisotropia para o filtro anisotrópico.
+
+    // // Filtragem Anisotropica 16
+    // texture.magFilter = THREE.LinearFilter; // filtro default para magnificação
+    // texture.minFilter = THREE.LinearMipmapLinearFilter; // filtro default para minificação
+    // texture.anisotropy = 16; // fator máximo de anisotropia para o filtro anisotrópico.
+
+
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
 };

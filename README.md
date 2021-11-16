@@ -90,9 +90,9 @@ Já o **LinearMipmapLinearFilter**, escolhe dois mipmaps que mais se aproximam d
 <h3>Filtro de Anisotropia</h3>
 
 Ainda no contexto da minificação, a análise a seguir foi feita levando em consideração os parâmetros padrões de magnificação e minificação do ThreeJs(LinearFilter e LinearMipmapLinearFilter, respectivamente).
-Nesse âmbito, a metodologia consistiu em  varirar o parâmetro **texture.anisotropy** de modo a atribuí-lo com os valores: 2,4,8 e 16(valores estes citados em sala de aula).  
+Nesse âmbito, a metodologia consistiu em  variar o parâmetro **texture.anisotropy** de modo a atribuí-lo com os valores: 2,4,8 e 16 (valores estes citados em sala de aula).  
 
-Em primeiro plano, com a anisotropia igual a 2, pôde-se percerber um borramento na fronteira superior da figura.
+Em primeiro plano, com a anisotropia igual a 2 (2 amostras x 8 consultas implicando em até 16 consultas), pôde-se percerber um borramento na fronteira superior da figura.
 
 <br>
 <p align = "center">
@@ -104,7 +104,7 @@ Em primeiro plano, com a anisotropia igual a 2, pôde-se percerber um borramento
 </p>
 
 
-Aumentando a anisotropia para 4 houve um melhoramento da qualidade da imagem, porém ainda com leves borramentos.
+Aumentando a anisotropia para 4 (4 amostras x 8 consultas implicando em até 32 consultas) houve um melhoramento da qualidade da imagem, porém ainda com leves borramentos.
 <br>
 <p align = "center">
 <img  style = "justify-content: center" src= "prints/aniso4.png" alt =   "drawing" width = "306" height = "298">
@@ -114,7 +114,7 @@ Aumentando a anisotropia para 4 houve um melhoramento da qualidade da imagem, po
 <b> Figura 8: texture.anisotropy: 4</b><p>
 </p>
 
-A partir da anisotropia em 8, a qualidade da imagem teve um nítido melhoramento, de modo que não houve muita diferença entre a anisotropia ser 8 ou 16.
+A partir da anisotropia em 8 (8 amostras x 8 consultas implicando em até 64 consultas), a qualidade da imagem teve um nítido melhoramento, de modo que não houve muita diferença entre a anisotropia ser 8 ou 16(com 16 amostras x 8 consultas podendo implicar em até 128 consultas).
 
 <br>
 <p align = "center">
