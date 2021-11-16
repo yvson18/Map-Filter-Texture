@@ -11,8 +11,8 @@ const texture = new THREE.Texture(image);
 image.onload = function() {
     texture.needsUpdate = true;
     texture.magFilter = THREE.LinearFilter; // filtro a ser utilizado em caso de magnificação.
-    texture.minFilter = THREE.LinearMipmapLinearFilter; // filtro a ser utilizado em caso de minificação.
-    texture.anisotropy = 16; // fator máximo de anisotropia para o filtro anisotrópico.
+    texture.minFilter = THREE.LinearMipmapNearestFilter; // filtro a ser utilizado em caso de minificação.
+    texture.anisotropy = 1; // fator máximo de anisotropia para o filtro anisotrópico.
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
 };
